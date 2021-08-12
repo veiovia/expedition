@@ -22,7 +22,7 @@ function BlockView(props: any) {
   const {
     timestamp, hash, parentHash, miner, nonce, difficulty,
     extraData, stateRoot, transactionsRoot, receiptsRoot, transactions,
-    gasUsed, gasLimit, size,
+    gasUsed, gasLimit, size, hubs, workPackage,
   } = block;
 
   const filledPercent = (hexToNumber(gasUsed) / hexToNumber(gasLimit)) * 100;
@@ -136,6 +136,16 @@ function BlockView(props: any) {
           <TableRow>
             <TableCell>{t("Receipts Root")}</TableCell>
             <TableCell>{receiptsRoot}</TableCell>
+          </TableRow>
+
+          <TableRow>
+            <TableCell>{t("Hub")}</TableCell>
+            <TableCell>{hubs}</TableCell>
+          </TableRow>
+
+          <TableRow>
+            <TableCell>{t("Work Package")}</TableCell>
+            <TableCell>{workPackage[0]}</TableCell>
           </TableRow>
         </TableBody>
       </Table>
