@@ -1,3 +1,5 @@
+BitBucket link : https://bitbucket.org/veiovia/expedition.git
+
 # Expedition
 
 <!-- project logo w/ quick links -->
